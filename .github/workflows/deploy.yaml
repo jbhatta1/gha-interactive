@@ -12,3 +12,10 @@ jobs:
         run: |
             ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
+      # Trigger an approval request via Microsoft Teams
+      - uses: jamesridgway/github-actions-approval-request@main
+        with:
+          trigger-workflow: 27506981
+          notification-webhook-url: ${{ secrets.WEBHOOK_URL }}
+          github-actions-approval-api-url: ${{secrets.ACTIONS_APPROVAL_API_URL}}
+          github-actions-approval-api-key: ${{secrets.ACTIONS_APPROVAL_API_KEY}}
