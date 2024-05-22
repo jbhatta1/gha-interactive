@@ -12,7 +12,7 @@ jobs:
         run: |
             ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
-      # Trigger an approval request via Microsoft Teams
+      #  Trigger an approval request via Microsoft Teams
       - uses: jamesridgway/github-actions-approval-request@main
         with:
           trigger-workflow: 27506981
