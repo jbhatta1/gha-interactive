@@ -1,4 +1,4 @@
-name: INPUT
+name: MY-INPUT
 
 on:
   workflow_dispatch:
