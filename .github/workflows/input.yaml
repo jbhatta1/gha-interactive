@@ -29,17 +29,19 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ github.event.inputs.SERVICE_NAME   == 'L Service'}}
     steps:
-      - name: "Checkout source code"
-        uses: actions/checkout@v3
+      - name: "l-service"
+        run: "echo l-service"
 
   S-Service:
     runs-on: ubuntu-latest
     if: ${{ github.event.inputs.SERVICE_NAME   == 'S Service'}}
     steps:
-      - name: "Checkout source code"
-        uses: actions/checkout@v3
+      - name: "s-service"
+        run: "echo s-service"
 
   O-Service:
     runs-on: ubuntu-latest
     if: ${{ github.event.inputs.OTHER_INPUT   == 'O Service'}}
     steps:
+      - name: "o-service"
+        run: "echo o-service"
